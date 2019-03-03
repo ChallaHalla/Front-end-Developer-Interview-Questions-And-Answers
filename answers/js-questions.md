@@ -57,7 +57,9 @@ sometimes don't need to add event listeners for every element.
 
 #### Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 
-*Not answered yet*
+`function Person(){}`: a function called person.
+`var person = Person()`: setting var to the value returned by function Person.
+`var person = new Person()`: creating new object and setting that object to the value of `this` for the scope of Person. Now Person can act as a constructor for this object and do things like set attributes or prototypes. If Person was meant to be a constructor and was called without the `new` keyword then the value of `this` inside the constructor would remain as the global `this` and would therefore not create a new object with unique properties. 
 
 #### What's the difference between `.call` and `.apply`?
 
